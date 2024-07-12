@@ -1,0 +1,73 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: aquamarine; */
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* stars container */
+.container > .star-container {
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  width: 36rem;
+  height: 16rem;  
+  padding: 1rem;
+  /* background-color: orange; */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container > .star-container > .stars {
+  /* background-color: orangered; */
+  height: auto;
+  width: 100%;
+  
+  
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container > .star-container > .stars > .star-icon {
+  font-size: 5rem;
+  fill: transparent;
+  width: 5rem;
+  stroke: #c4c2c2;
+  stroke-width: 0.5;
+  cursor: pointer;
+}
+
+.container > .star-container > .stars > .active-star {
+  fill: gold;
+  stroke: gold;
+}
+
+.container > .star-container >.message{
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .container > .star-container {
+    width: 80%;
+  }
+
+  .container>.star-title{
+    font-size: 1.5rem;
+  }
+}
