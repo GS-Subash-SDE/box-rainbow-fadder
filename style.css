@@ -1,73 +1,58 @@
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
-.container {
-  width: 100vw;
+.container{
   height: 100vh;
-  /* background-color: aquamarine; */
-  font-family: "Roboto", sans-serif;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+gap: 1rem;
+
 }
 
-/* stars container */
-.container > .star-container {
+h2{
+ font-size: 48px; /* Adjust the size as needed */
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(240, 64, 64), pink, gold, rgb(31, 189, 31), blue, violet);
+    -webkit-background-clip: text;
+    color: transparent; /* Hide the original color */
+    text-align: center; /* Center the text */
+}
+
+.wrapper{
   border: 2px solid black;
   border-radius: 0.5rem;
-  width: 36rem;
-  height: 16rem;  
-  padding: 1rem;
-  /* background-color: orange; */
+  width: 30rem;
+  height: 30rem;
   
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 
-.container > .star-container > .stars {
-  /* background-color: orangered; */
-  height: auto;
-  width: 100%;
-  
-  
-  display: flex;
-  
-  justify-content: space-around;
-  align-items: center;
+.col{
+  /* border: 1px solid salmon; */
+flex: 1;
+
+display: flex;
+justify-content: start;
+align-items: center;
+gap: 7.4rem;
+
 }
 
-.container > .star-container > .stars > .star-icon {
-  font-size: 5rem;
-  fill: transparent;
+.box{
   width: 5rem;
-  stroke: #c4c2c2;
-  stroke-width: 0.5;
+  height: 5rem;
+  border: 1px solid grey;
   cursor: pointer;
-}
 
-.container > .star-container > .stars > .active-star {
-  fill: gold;
-  stroke: gold;
-}
-
-.container > .star-container >.message{
-  font-size: 1.5rem;
-}
-
-@media only screen and (max-width: 480px) {
-  .container > .star-container {
-    width: 80%;
-  }
-
-  .container>.star-title{
-    font-size: 1.5rem;
+  &:hover{
+    background-color: rgb(216, 215, 215);
   }
 }
