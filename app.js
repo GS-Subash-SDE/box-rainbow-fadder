@@ -46,6 +46,8 @@ function tempStar(e){
 
   // console.log('IN:' + hoverStar);
   messageElement.innerText = message[hoverStar];
+      document.title = messageElement.innerText;
+
 };
 
 function selectingStar(e) {
@@ -69,14 +71,16 @@ star_container.addEventListener("mouseleave", (e) => {
     star.classList.remove("active-star");
   }
   messageElement.innerText = "Give your Feedback!";
+  document.title = 'Five Stars ⭐';
   
-  if (choosenStar>=0) {
+  if (choosenStar!=null) {
     for (let i = 0; i <= choosenStar; i++) {
       const star = document.querySelector(`#star-${i}`);
       // console.log(star);
       star.classList.add("active-star");
     }
-    messageElement.innerText = message[choosenStar]
+    messageElement.innerText = message[choosenStar];
+    document.title = messageElement.innerText;
   }
 
   // console.log('out:'+hoverStar);
